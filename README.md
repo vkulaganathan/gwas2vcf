@@ -5,7 +5,10 @@ The tool **gwas2vcf** can convert GWAS results files, like the .tsv.bgz files fr
 
 For best results, it's recommended to create a virtual environment with Python 3.11.6, as that's the version this tool was tested with.
 
-**USAGE:** ```$ gwas2vcf [-h] -i INPUT -o OUTPUT```
+**Installation:**
+```$ pip install gwas2vcf```
+
+**Usage:** ```$ gwas2vcf [-h] -i INPUT -o OUTPUT```
 
 ```options:
   -h, --help  show this help message and exit
