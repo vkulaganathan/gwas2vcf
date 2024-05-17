@@ -16,5 +16,7 @@ For best results, it's recommended to create a virtual environment with Python 3
               please provide the path for the input file with the extension *tsv.bgz
   -o OUTPUT, --output OUTPUT
               please provide desire output file name, tool will automatically append the *vcf.gz extension
+  -v VERSION, --version
+              displays the version installed
 
 
