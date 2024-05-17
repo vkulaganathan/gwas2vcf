@@ -16,5 +16,4 @@ options:
   -o OUTPUT, --output OUTPUT
                         please provide desire output file name, tool will automatically append the .vcf.gz extension
 
-If you like my tool or have suggestions for improvements, please consider following me on X and leave a post.
-https://x.com/VK_Ulaganathan
+
