@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name="gwas2vcf",
-    version="0.1.8",
+    version="0.1.9",
     author="Pr (France). Dr. rer. nat. Vijay K. ULAGANATHAN",
     author_email="vijay-kumar.ulaganathan@uni-tuebingen.de",
     description="A tool to convert GWAS TSV files to VCF format",
