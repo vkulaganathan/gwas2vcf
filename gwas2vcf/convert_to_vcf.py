@@ -1,6 +1,9 @@
 ##code for converting UK BioBank GWAS file to standard VCF4.0 format.
 ##If you found our code useful, please consider following me on https://x.com/VK_Ulaganathan
 
+##code for converting UK BioBank GWAS file to standard VCF4.0 format.
+##If you found our code useful, please consider following me on https://x.com/VK_Ulaganathan
+
 import pandas as pd
 import gzip
 import argparse
@@ -9,7 +12,7 @@ from tqdm import tqdm
 def parse_arguments():
     parser = argparse.ArgumentParser(description="Convert GWAS file VCF format.")
     parser.add_argument("-i", "--input", required=True, help="please provide the path for the input file with the extension .bgz")
-    parser.add_argument("-o", "--output", required=True, help="please provide desire output file name, tool will automatically append the .vcf.gz extension")
+    parser.add_argument("-o", "--output", required=True, help="please provide desired output file name, tool will automatically append the .vcf.gz extension")
     return parser.parse_args()
 
 def main():
@@ -48,14 +51,18 @@ def main():
         
         # Write the VCF body with progress bar
         for _, row in tqdm(df.iterrows(), total=df.shape[0], desc="Processing rows"):
-            info_fields = [
-                f"AC={int(row['AC'])}",
-                f"AF={float(row['minor_AF'])}",
-                f"AN={2 * int(row['n_complete_samples'])}"  # assuming diploid samples
-            ]
-            if row['low_confidence_variant'] == 'true':
-                info_fields.append("low_confidence")
-            
+            # Create INFO field with all columns except 'variant', 'CHROM', 'POS', 'REF', and 'ALT'
+            info_fields = []
+            for column in df.columns:
+                if column not in ['variant', 'CHROM', 'POS', 'REF', 'ALT']:
+                    value = row[column]
+                    # Handle boolean flags
+                    if column == 'low_confidence_variant':
+                        if value == 'true':
+                            info_fields.append("low_confidence")
+                    else:
+                        info_fields.append(f"{column}={value}")
+
             info_str = ";".join(info_fields)
             format_str = "GT"
             sample_str = "./."
