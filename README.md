@@ -7,7 +7,7 @@ For best results, it's recommended to create a virtual environment with Python 3
 
 **Example of conversion**
 
-<br>Uk BioBank GWAS Result file</br>
+<br>UK BioBank GWAS Result file</br>
 ![Example Image](images/gwas.png)
 
 <br>Converted VCF4.0 file</br>
