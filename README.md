@@ -5,6 +5,14 @@ The tool **gwas2vcf** can convert GWAS results files, like the .tsv.bgz files fr
 
 For best results, it's recommended to create a virtual environment with Python 3.11.6, as that's the version this tool was tested with.
 
+**Example of conversion**
+Uk BioBank GWAS Result file
+![Example Image](images/gwas.png)
+
+Converted VCF4.0 file
+![Example Image](images/gwas2vcf.png)
+
+
 **Installation:**
 ```$ pip install gwas2vcf```
 
