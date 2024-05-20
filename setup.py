@@ -7,7 +7,7 @@ setup(
     name="gwas2vcf",
     version="0.1.9",
     author="Pr (France). Dr. rer. nat. Vijay K. ULAGANATHAN",
-    author_email="vijay-kumar.ulaganathan@uni-tuebingen.de",
+    author_email=" ",
     description="A tool to convert GWAS TSV files to VCF format",
     long_description=long_description,
     long_description_content_type="text/markdown",
