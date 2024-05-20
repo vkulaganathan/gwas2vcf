@@ -1,9 +1,6 @@
 ##code for converting UK BioBank GWAS file to standard VCF4.0 format.
 ##If you found our code useful, please consider following me on https://x.com/VK_Ulaganathan
 
-##code for converting UK BioBank GWAS file to standard VCF4.0 format.
-##If you found our code useful, please consider following me on https://x.com/VK_Ulaganathan
-
 import pandas as pd
 import gzip
 import argparse
